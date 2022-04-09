@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+
+\newcommand {\R}{\mathbb{R}}
+\newcommand {\N}{\mathbb{N}}
+\begin{document}
+
+\section{Spazio euclideo}
+$$
+\R ^ n := { x = (x_1, x_2, \dots , x_n | x_1, x_2, x_n \in \R }
+$$	
+In $ \R ^ n $ vale 
+
+\begin{description}
+	\item [Somma tra vettori] $ x = (x_1,\dots,x_2) , y = (y_1, ... , y_n) $
+		$$
+		x+y=(x_1+y_1 + \dots + x_n + y_n )
+		$$
+	\item [Prodotto  con scalare] dato $ x=(x_1, \dots , x_n) , \lambda \in \R $, poniamo
+		$$
+		\lambda x:=( \lambda x_1, \dots , \lambda x_n )
+\end{description}
+
+\paragraph{Definizione Prodotto scalare euclideo} Dati $x , y \in \R ^ n $, poniamo:
+$$
+\langle x,y \rangle \rangle := \sum_{k=1}^n x_k y_k
+$$
+
+\subsection{ Proprietà: }
+
+\begin{enumerate}
+	\item [Simmetrie] $\langle x,y \rangle = \langle y,x \rangle \quad \forall x,y \in \R ^n $ 
+
+	\item [Bilinearità] $ \langle \lambda x + \mu y , z \rangle = \lambda \langle x ,z \rangle + \mu \langle y,z \rangle $ e
+		$ \langle z, \lambda x + \mu y \rangle = \lambda \langle z,x \rangle + \mu \langle z,y \rangle \quad \forall x,y,z \in \R ^ n \et \lambda , \mu \in \R $
+		\item $ \langle x,x \rangle \ge 0 \quad \forall x \in \R ^ n $
+		\item $ \langle x,x \rangle = 0 \iff x= \underline{0} = (0,0,\dots, 0). $
+\end{enumerate}
+
+\subsection { Definizione Vettori ortogonale} $x,y \in \R ^n $ si dicono ortogonali se $ \langle x,y \rangle = 0
+
+\subsection { Definizione Norma euclidea }
+Dato $ x \in \R ^n $, poniamo $ \|x \| := \sqrt{\langle x,x \rangle } \in [0, + \infty [ 
+Si dice norma di x (viene usata la notazione $|x|$ 
+
+\paragraph { Interpretazione della norma con lunghezza (con il Teorema di Pitagora) }
+
+
+
+
+\end{document}
