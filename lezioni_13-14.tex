@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\newcommand {\R}{\mathbb{R}}
+\newcommand {\N}{\mathbb{N}}
+\usepackage{graphicx}
+
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+
+\section{Forme Quadratiche}
+
+\subsection{Definizione}
+
+Sia $A\in \R ^ {n\times n}$ $A=A^T$ considero $q_A:\; \R^n \rightarrow \R $ $q_A(h) = <Ah, h>$\newline
+$\forall h = (h_1,\dots, h_n)\in \R$ \qquad $A\in \R^{n\times n},\;h\in \R^{n\times 1},\; Ah\in \R^{n\times 1}$\newline
+$q_A$ è la forma quadratica associata alla matrice quadrata e simmetrica A
+
+\textbf{quadrata:} matrice che ha lo stesso numero di righe e colonne
+
+\textbf{simmetrica:} matrice che è uguale alla sua trasposta
+
+
+$$
+    A =
+    \begin{bmatrix}
+        a & b \\
+        b & c
+    \end{bmatrix}
+    = A^T
+$$
+$$
+    q_A = <
+    \begin{bmatrix}
+        a & b \\
+        b & c
+    \end{bmatrix}
+    \begin{bmatrix}
+        h_1 \\
+        h_2
+    \end{bmatrix},
+    \begin{bmatrix}
+        h_1 \\
+        h_2
+    \end{bmatrix}
+    > = <
+    \begin{bmatrix}
+        ah_1 + bh_2 \\
+        bh_1 + ch_2
+    \end{bmatrix},
+    \begin{bmatrix}
+        h_1 \\
+        h_2
+    \end{bmatrix}
+    > = ah_1^2+2b\,h_1\,h_2+ch_2^2
+$$
+
+\paragraph{Osservazione informale:}
+Abbiamo trovato un polinomio di grado 2,\\
+quindi possiamo dire che le forme quadratiche sono delle funzioni
+associate a delle matrici che rappresentano polinomi
+
+
+\subsection{Segno di una forma quadratica}
+
+
+
+\end{document}
