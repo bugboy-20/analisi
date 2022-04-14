@@ -3,12 +3,12 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\newcommand {\R}{\mathbb{R}}
-\newcommand {\N}{\mathbb{N}}
 \usepackage{graphicx}
 
 \usepackage[utf8]{inputenc}
 
+\newcommand {\R}{\mathbb{R}}
+\newcommand {\N}{\mathbb{N}}
 
 \begin{document}
 
@@ -17,7 +17,7 @@
 
 \subsection{Definizione}
 
-Sia $A\in \R ^ {n\times n}$ $A=A^T$ considero $q_A:\; \R^n \rightarrow \R $ $q_A(h) = <Ah, h>$\newline
+Sia $A\in \R ^ {n\times n}$ $A=A^T$ considero $q_A:\; \R^n \rightarrow \R $ $q_A(h) = \langle Ah, h\rangle$\newline
 $\forall h = (h_1,\dots, h_n)\in \R$ \qquad $A\in \R^{n\times n},\;h\in \R^{n\times 1},\; Ah\in \R^{n\times 1}$\newline
 $q_A$ è la forma quadratica associata alla matrice quadrata e simmetrica A
 
@@ -35,7 +35,7 @@ $$
     = A^T
 $$
 $$
-    q_A = <
+    q_A = \;\langle
     \begin{bmatrix}
         a & b \\
         b & c
@@ -48,7 +48,7 @@ $$
         h_1 \\
         h_2
     \end{bmatrix}
-    > = <
+    \rangle\; = \;\langle
     \begin{bmatrix}
         ah_1 + bh_2 \\
         bh_1 + ch_2
@@ -57,16 +57,58 @@ $$
         h_1 \\
         h_2
     \end{bmatrix}
-    > = ah_1^2+2b\,h_1\,h_2+ch_2^2
+    \rangle\; = ah_1^2+2b\,h_1\,h_2+ch_2^2
+$$
+\\Caso con n generico:
+
+$$
+    q_A = \sum_{j,k = 1}^{n} a_{jk} h_k h_j = \sum_{j = 1}^{n} a_{jj} h_j^2 + \sum_{1\leq j < k\leq n} a_{jk}h_jh_k
 $$
 
-\paragraph{Osservazione informale:}
+\paragraph*{Osservazione informale:}
 Abbiamo trovato un polinomio di grado 2,\\
 quindi possiamo dire che le forme quadratiche sono delle funzioni
 associate a delle matrici che rappresentano polinomi
 
 
 \subsection{Segno di una forma quadratica}
+
+\textbf{Def:} $A^T = A \in \R^{n\times n}$
+
+\begin{enumerate}
+    \item Si dice che A è definita positiva se vale $\langle Ah, h\rangle > 0\; \forall h \neq 0 \in \R ^n$
+    \item Si dice che A è definita negativa se vale $\langle Ah, h\rangle < 0\; \forall h \neq 0 \in \R ^n$
+    \item Si dice che A è indefinita se $\exists h^+, h^- \in \R ^n$ t.c. \\$\langle Ah^-,h^-\rangle  \lneqq 0 \lneqq \langle Ah^+,h^+ \rangle$
+\end{enumerate}
+
+\paragraph*{Osservazione informale:}
+La matrice A è positiva se per ogni vettore h è positiva, stessa cosa vale per il negativo.
+Invece si dice indefinita se per alcuni vettori h è negativa e per altri è positiva,
+quindi non possiamo assegnarli un segno preciso.
+
+\paragraph*{Osservazione informale:}
+I segni di disuguaglianza devono essere stretti ($<, >$),
+altrimenti si dice che A è semidefinita positiva.\\
+
+
+Forme quadratiche non singolari:
+\begin{enumerate}
+    \item $A > 0 \Leftrightarrow
+              \begin{cases}
+                  a > 0                                             \\
+                  ac-b^2 > 0 & \quad \textit{determinante positivo}
+              \end{cases} $
+    \item $A < 0 \Leftrightarrow
+              \begin{cases}
+                  a < 0                                             \\
+                  ac-b^2 > 0 & \quad \textit{determinante positivo}
+              \end{cases} $
+    \item A è indefinita $\Leftrightarrow ac-b^2<0 \quad \textit{determinante negativo}$
+          \\
+          \\Forme quadratiche singolari:
+    \item se $ac-b^2 = 0$, quindi \textit{determinante nullo}, si tratta di una matrice singolare, quindi A è semidefinita
+\end{enumerate}
+
 
 
 
