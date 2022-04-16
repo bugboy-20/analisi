@@ -148,6 +148,35 @@ Scriviamo la Taylor in t per g con punto iniziale t = 0. Otteniamo:
 $$g(t) = g(0) + g'(0)t + g''(0)\frac{t^2}{2} + o(t^2)$$
 Trascrivendo in termini di f si trova esattamente la formula~\ref{eq:taylor2} da dimostrare.
 
+\section{Teorema di classificazione dei punti critici}
+
+Se $f:\; A \rightarrow \R$ è $C^2$ sull'aperto $A\subseteq \R ^n$, vale quanto segue, per $\overline{x} \in A$
+
+\begin{enumerate}
+    \item $
+              \begin{cases}
+                  \bigtriangledown f(\overline{x}) = 0                                                      \\
+                  Hf(\overline{x}) > 0 & \quad\Longrightarrow \overline{x} \text{ è punto di minimo locale}
+              \end{cases}
+          $
+    \item $
+              \begin{cases}
+                  \bigtriangledown f(\overline{x}) = 0                                                       \\
+                  Hf(\overline{x}) < 0 & \quad\Longrightarrow \overline{x} \text{ è punto di massimo locale}
+              \end{cases}
+          $
+    \item $
+              \begin{cases}
+                  \bigtriangledown f(\overline{x}) = 0                                                             \\
+                  Hf(\overline{x}) \text{ indefinita} & \quad\Longrightarrow \overline{x} \text{ è punto di sella}
+              \end{cases}
+          $
+\end{enumerate}
+
+\paragraph*{Nota:}
+$\overline{x}$ punto critico di f si dice di sella se $\forall r > 0\;\; \exists x_+\,,\; x_- \in B(\overline{x}, r)$
+tale che $f(x_-) < f(\overline{x}) < f(x_+)$
+
 
 
 \end{document}
