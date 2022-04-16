@@ -1,14 +1,5 @@
 \documentclass[12pt]{article}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{graphicx}
-
-\usepackage[utf8]{inputenc}
-
-\newcommand {\R}{\mathbb{R}}
-\newcommand {\N}{\mathbb{N}}
+\usepackage{settings}
 
 \begin{document}
 
@@ -127,22 +118,22 @@ Tale minimo è positivo e lo chiamiamo m. Dunque $\langle Ah, h\rangle = r^2g(\t
 \section{Formula di Taylor di ordine 2}
 
 $A\subseteq \R^n$ aperto, $f:\;A\rightarrow \R$, f è di classe $C^2$\\
-Allora vale $\forall \overline{x} \in A$ vale lo sviluppo
-$$f(\overline{x} + h) = f(\overline{x}) + \langle \bigtriangledown f(\overline{x}), h \rangle + \frac{1}{2}\langle Hf(\overline{x})h, h \rangle + o(\rvert h \rvert ^2)\;\;\;\text{per } h\rightarrow 0$$
+Allora vale $\forall \ox \in A$ vale lo sviluppo
+$$f(\ox + h) = f(\ox) + \langle \bigtriangledown f(\ox), h \rangle + \frac{1}{2}\langle Hf(\ox)h, h \rangle + o(\rvert h \rvert ^2)\;\;\;\text{per } h\rightarrow 0$$
 
 \paragraph*{Dimostrazione:}
 Dimostriamo la seguente formula con resto "non uniforme"
 $$\forall v \in \R ^n,\; \rvert v\rvert = 1, \forall x \in A$$
 vale la formula
 \begin{equation}\label{eq:taylor2}
-    f(\overline{x} + tv) = f(\overline{x}) + \langle \bigtriangledown f(\overline{x}), tv \rangle + \frac{1}{2}\langle Hf(\overline{x})tv, tv \rangle + o(t ^2)\;\;\;\text{per } t\rightarrow 0 \in \R
+    f(\ox + tv) = f(\ox) + \langle \bigtriangledown f(\ox), tv \rangle + \frac{1}{2}\langle Hf(\ox)tv, tv \rangle + o(t ^2)\;\;\;\text{per } t\rightarrow 0 \in \R
 \end{equation}
 \\
-Consideriamo la funzione $g:\;]-\varepsilon, \varepsilon[ \;\rightarrow \R$, $g(t) = f(\overline{x} + tv)$
+Consideriamo la funzione $g:\;]-\varepsilon, \varepsilon[ \;\rightarrow \R$, $g(t) = f(\ox + tv)$
             definita per $\varepsilon$  sufficientemente piccolo. \\
             Poichè f è di classe $C^2$, si vede che
-        $\exists g'(t) = \langle \bigtriangledown f(\overline{x}+tv), v \rangle\;\;\forall t \in \;]-\varepsilon, \varepsilon[$
-inoltre esiste ed è  continua $g''(t) = \langle Hf(\overline{x}+tv)v, v \rangle$
+        $\exists g'(t) = \langle \bigtriangledown f(\ox+tv), v \rangle\;\;\forall t \in \;]-\varepsilon, \varepsilon[$
+inoltre esiste ed è  continua $g''(t) = \langle Hf(\ox+tv)v, v \rangle$
 \\\\
 Scriviamo la Taylor in t per g con punto iniziale t = 0. Otteniamo:
 $$g(t) = g(0) + g'(0)t + g''(0)\frac{t^2}{2} + o(t^2)$$
@@ -150,32 +141,32 @@ Trascrivendo in termini di f si trova esattamente la formula~\ref{eq:taylor2} da
 
 \section{Teorema di classificazione dei punti critici}
 
-Se $f:\; A \rightarrow \R$ è $C^2$ sull'aperto $A\subseteq \R ^n$, vale quanto segue, per $\overline{x} \in A$
+Se $f:\; A \rightarrow \R$ è $C^2$ sull'aperto $A\subseteq \R ^n$, vale quanto segue, per $\ox \in A$
 
 \begin{enumerate}
     \item $
               \begin{cases}
-                  \bigtriangledown f(\overline{x}) = 0                                                      \\
-                  Hf(\overline{x}) > 0 & \quad\Longrightarrow \overline{x} \text{ è punto di minimo locale}
+                  \bigtriangledown f(\ox) = 0                                             \\
+                  Hf(\ox) > 0 & \quad\Longrightarrow \ox \text{ è punto di minimo locale}
               \end{cases}
           $
     \item $
               \begin{cases}
-                  \bigtriangledown f(\overline{x}) = 0                                                       \\
-                  Hf(\overline{x}) < 0 & \quad\Longrightarrow \overline{x} \text{ è punto di massimo locale}
+                  \bigtriangledown f(\ox) = 0                                              \\
+                  Hf(\ox) < 0 & \quad\Longrightarrow \ox \text{ è punto di massimo locale}
               \end{cases}
           $
     \item $
               \begin{cases}
-                  \bigtriangledown f(\overline{x}) = 0                                                             \\
-                  Hf(\overline{x}) \text{ indefinita} & \quad\Longrightarrow \overline{x} \text{ è punto di sella}
+                  \bigtriangledown f(\ox) = 0                                                    \\
+                  Hf(\ox) \text{ indefinita} & \quad\Longrightarrow \ox \text{ è punto di sella}
               \end{cases}
           $
 \end{enumerate}
 
 \paragraph*{Nota:}
-$\overline{x}$ punto critico di f si dice di sella se $\forall r > 0\;\; \exists x_+\,,\; x_- \in B(\overline{x}, r)$
-tale che $f(x_-) < f(\overline{x}) < f(x_+)$
+$\ox$ punto critico di f si dice di sella se $\forall r > 0\;\; \exists x_+\,,\; x_- \in B(\ox, r)$
+tale che $f(x_-) < f(\ox) < f(x_+)$
 
 
 
