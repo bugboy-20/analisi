@@ -168,6 +168,49 @@ Se $f:\; A \rightarrow \R$ è $C^2$ sull'aperto $A\subseteq \R ^n$, vale quanto 
 $\ox$ punto critico di f si dice di sella se $\forall r > 0\;\; \exists x_+\,,\; x_- \in B(\ox, r)$
 tale che $f(x_-) < f(\ox) < f(x_+)$
 
+\paragraph*{Dimostrazione}
+
+Sia $A\subseteq \R^n$ aperto e $f: A \to \R$ di classe $C^2$.\\
+Sia $\ox \in A$ un punto critico con $Hf(\ox) > 0$.\\
+Dobbiamo dimostrare che $\exists \delta >0$ tale che:
+$$
+    f(\ox+h) - f(\ox) \geq 0 \;\;\;\; \forall h\in B(0,\delta)
+$$
+\\
+Usiamo la formuala di Taylor.
+$$
+    f(\ox + h)-f(\ox) = f(\ox) + \langle \bigtriangledown f(\ox), h \rangle + \frac{1}{2}\langle Hf(\ox)h, h \rangle + o(\rvert h \rvert ^2)\;\;\;\text{per } h\to 0
+$$
+visto che $\bigtriangledown f(\ox) = 0$, analizziamo $ \frac{1}{2}\langle Hf(\ox)h, h\rangle + o\left(\vert h\vert^2\right) \geq 0 $\\
+Per il teorema sulle forme positive $\exists m>0$ tale che
+$$
+    \langle Hf(x)h, h\rangle\geq m \vert h\vert^2\;\;\;\;\forall h\in \R^2
+$$
+\\
+Usando la definizione di o-piccolo con $\varepsilon = \frac{m}{4}$, $\exists \delta >0$ tale che
+$$
+    -\frac{m}{4} \leq \frac{o(\vert h\vert^2)}{\vert h\vert^2}\leq\frac{m}{4} \;\;\;\;\forall h\in B(0,\delta)
+$$
+\\
+Dunque, per $\vert h\vert <\delta$ vale
+%$$
+%    f(\ox+h) - f(\ox) \geq \vert h\vert^2 \left(\frac{1}{2}m + \frac{o\left(\vert h\vert^2\right)}{\vert h\vert^2}\right) \geq \vert h\vert^2 \left(\frac{m}{2} - \frac{m}{4}\right) = \frac{m}{4}\vert h\vert^2 \geq 0 \;\;\;\;\forall h\in B(0,\delta)
+%$$
+
+\begin{align*}
+    f(\ox+h) - f(\ox) & \geq \vert h\vert^2 \left(\frac{1}{2}m + \frac{o\left(\vert h\vert^2\right)}{\vert h\vert^2}\right)\geq                        \\
+                      & \geq \vert h\vert^2 \left(\frac{m}{2} - \frac{m}{4}\right) = \frac{m}{4}\vert h\vert^2 \geq 0 \;\;\;\;\forall h\in B(0,\delta)
+\end{align*}
+Il teorema è dimostrato. I casi di punto di massimo o sella sono analoghi.
 
 
+\subsection{Condizioni necessarie affinchè $\ox$ sia di minimo}
+Siamo nel secondo ordine. Se $A\subseteq \R^n$ è aperto, f è $C^2$ su A e $\ox$ è di minimo, allora:
+$$
+    \begin{cases}
+        \bigtriangledown f(\ox) = 0 \\
+        \langle Hf(\ox)h, h \rangle \geq 0 \;\;\;\forall h\in\R^n
+    \end{cases}
+$$
+Si dice in tal caso che $Hf(\ox)$ è semidefinita positiva
 \end{document}
